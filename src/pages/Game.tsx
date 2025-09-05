@@ -153,9 +153,7 @@ export default function Game() {
 
         {/* Game Area */}
         <div className="flex flex-col lg:flex-row gap-6 items-start justify-center">
-          <div className="absolute lg:relative top-0 right-0 lg:top-auto lg:right-auto lg:ml-6">
-            <NextPiece nextPiece={gameState.nextPiece} />
-          </div>
+          {/* <div className="absolute lg:relative top-0 right-0 lg:top-auto lg:right-auto lg:ml-6"></div> */}
 
           {/* Game Board */}
           <div className="flex-shrink-0">
@@ -208,6 +206,8 @@ export default function Game() {
           {/* Side Panel */}
           <div className="flex-shrink-0 w-full lg:w-80">
             <div className="space-y-4">
+              <NextPiece nextPiece={gameState.nextPiece} />
+
               <ScoreBoard
                 gameState={gameState}
                 onPause={pauseGame}
