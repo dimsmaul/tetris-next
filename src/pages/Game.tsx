@@ -178,19 +178,19 @@ export default function Game() {
               </Button>
               <Button
                 size={"icon"}
-                onClick={() => movePiece("down")}
-                className="h-12 w-12 bg-blue-500 hover:bg-blue-600 text-white border-blue-300 rounded-none"
-                style={{ boxShadow: "0 4px 0 #1e40af" }}
-              >
-                <ChevronDown />
-              </Button>
-              <Button
-                size={"icon"}
                 onClick={() => hardDrop()}
                 className="h-12 w-12 bg-blue-500 hover:bg-blue-600 text-white border-blue-300 rounded-none"
                 style={{ boxShadow: "0 4px 0 #1e40af" }}
               >
                 <ChevronsDown />
+              </Button>
+              <Button
+                size={"icon"}
+                onClick={() => movePiece("down")}
+                className="h-12 w-12 bg-blue-500 hover:bg-blue-600 text-white border-blue-300 rounded-none"
+                style={{ boxShadow: "0 4px 0 #1e40af" }}
+              >
+                <ChevronDown />
               </Button>
               <Button
                 size={"icon"}
