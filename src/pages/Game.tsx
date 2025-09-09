@@ -148,7 +148,7 @@ export default function Game() {
           <h1 className="text-4xl font-bold text-cyan-400 tracking-wider">
             TETRIS
           </h1>
-          <div className="text-yellow-400">PIXEL EDITION</div>
+          {/* <div className="text-yellow-400">PIXEL EDITION</div> */}
         </div>
 
         {/* Game Area */}
@@ -158,8 +158,7 @@ export default function Game() {
           {/* Game Board */}
           <div className="flex-shrink-0">
             <Board gameState={gameState} />
-            {/* TODO: If detected user use phone, will be show control  */}
-            <div className="flex flex-row items-center justify-between mt-3">
+            <div className="flex md:hidden flex-row items-center justify-between mt-3 ">
               <Button
                 size={"icon"}
                 onClick={() => movePiece("left")}

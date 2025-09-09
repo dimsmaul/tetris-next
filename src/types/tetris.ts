@@ -1,4 +1,4 @@
-export type TetrominoType = 'I' | 'O' | 'T' | 'L' | 'J' | 'S' | 'Z';
+export type TetrominoType = "I" | "O" | "T" | "L" | "J" | "S" | "Z" | "E";
 
 export interface Position {
   x: number;
@@ -37,7 +37,7 @@ export interface LevelConfig {
   scoreMultiplier: number;
 }
 
-export type GameTheme = 'classic' | 'neon' | 'pastel';
+export type GameTheme = "classic" | "neon" | "pastel";
 
 export interface GameSettings {
   startingLevel: number;
@@ -45,7 +45,12 @@ export interface GameSettings {
   soundEnabled: boolean;
 }
 
-export type GameStatus = 'welcome' | 'settings' | 'playing' | 'levelComplete' | 'gameOver';
+export type GameStatus =
+  | "welcome"
+  | "settings"
+  | "playing"
+  | "levelComplete"
+  | "gameOver";
 
 export interface TetrominoShape {
   [key: string]: number[][];
@@ -87,7 +92,44 @@ export const TETROMINO_SHAPES: TetrominoShape = {
     [0, 1, 1],
     [0, 0, 0],
   ],
+  E: [
+    [0, 0, 0, 0],
+    [1, 1, 1, 1],
+    [1, 1, 1, 1],
+    [0, 0, 0, 0],
+  ],
 };
 
 export const BOARD_WIDTH = 10;
 export const BOARD_HEIGHT = 20;
+
+
+// TODO: Need to implement special level colors for new tetrominoes
+export const TETROMINO_SHAPE_IMPOSSIBLE_LEVELS: TetrominoShape = {
+  ...TETROMINO_SHAPES, 
+  U: [
+    [1, 0, 1],
+    [1, 0, 1],
+    [1, 1, 1],
+  ],
+  F: [
+    [0, 1, 0],
+    [1, 1, 1],
+    [1, 0, 1],
+  ],
+}
+
+export const TETROMINO_SHAPE_GOD_LEVELS: TetrominoShape = {
+  ...TETROMINO_SHAPES, 
+  ...TETROMINO_SHAPE_IMPOSSIBLE_LEVELS,
+  P: [
+    [1, 1, 0],
+    [1, 1, 1],
+    [0, 1, 0],
+  ],
+  Q: [
+    [0, 1, 0],
+    [1, 1, 0],
+    [0, 1, 1],
+  ],
+}

@@ -10,9 +10,9 @@ export default function Welcome() {
     navigate('/game');
   };
 
-  const handleSettings = () => {
-    navigate('/settings');
-  };
+  // const handleSettings = () => {
+  //   navigate('/settings');
+  // };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-900 to-blue-900 flex items-center justify-center p-4">
@@ -23,7 +23,7 @@ export default function Welcome() {
             TETRIS
           </h1>
           <div className="text-yellow-400 text-xl font-bold mb-4">
-            PIXEL EDITION
+            {/* PIXEL EDITION */}
           </div>
           <div className="text-green-400 text-sm mb-6">
             Use Arrow Keys or WASD to Play
@@ -58,13 +58,13 @@ export default function Welcome() {
             START GAME
           </Button>
           
-          <Button
+          {/* <Button
             onClick={handleSettings}
             className="w-full h-12 bg-blue-500 hover:bg-blue-600 text-white font-bold text-lg border-4 border-blue-300 rounded-none"
             style={{ boxShadow: '0 4px 0 #1e40af' }}
           >
             SETTINGS
-          </Button>
+          </Button> */}
         </div>
 
         {/* Instructions */}

@@ -15,6 +15,7 @@ export const TETROMINO_COLORS = {
   J: "#0000f0", // Blue
   S: "#00f000", // Green
   Z: "#f00000", // Red
+  E: "#808080", // Gray for special pieces
 };
 
 export const createTetromino = (type: TetrominoType): Tetromino => {
@@ -26,7 +27,16 @@ export const createTetromino = (type: TetrominoType): Tetromino => {
 };
 
 export const getRandomTetromino = (): Tetromino => {
-  const tetrominoTypes: TetrominoType[] = ["I", "O", "T", "L", "J", "S", "Z"];
+  const tetrominoTypes: TetrominoType[] = [
+    "I",
+    "O",
+    "T",
+    "L",
+    "J",
+    "S",
+    "Z",
+    "E",
+  ];
   const randomType =
     tetrominoTypes[Math.floor(Math.random() * tetrominoTypes.length)];
   return createTetromino(randomType);
